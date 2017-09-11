@@ -1,0 +1,14 @@
+{
+  "name": "fadi",
+  "version": "1.0.6",
+  "description": "Read from your public Google Spreadsheets using Fadi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali M. Ismail <aismail@solostdio.co>",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^21.3.0"
+  }
+}
