@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "googleapis": "^21.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellyish/fadi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ellyish/fadi/issues"
+  },
+  "homepage": "https://github.com/ellyish/fadi#readme"
 }
