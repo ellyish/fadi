@@ -8,7 +8,7 @@ module.exports = class Fadi {
     }
 
     fetch_alaa_rows(callback) {
-      let ths = this;
+      let self = this;
         sheets.spreadsheets.values.get({
             key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
             spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
@@ -17,13 +17,12 @@ module.exports = class Fadi {
             if (err) {
                 throw err;
             }
-
             let res = [];
             var rows = response.values;
             if (rows.length === 0) {
                 callback([])
             } else {
-                ths.arr2json(rows, function(json) {
+                self.arr2json(rows, function(json) {
                     callback(json)
                 })
             }
@@ -31,7 +30,7 @@ module.exports = class Fadi {
     }
 
     fetch_specific_row(row_num, callback) {
-      let ths = this;
+      let self = this;
         sheets.spreadsheets.values.get({
             key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
             spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
@@ -46,7 +45,7 @@ module.exports = class Fadi {
             if (rows.length === 0) {
                 callback([])
             } else {
-                ths.arr2json(rows, function(json) {
+                self.arr2json(rows, function(json) {
                     callback(json)
                 })
             }
@@ -54,7 +53,7 @@ module.exports = class Fadi {
     }
 
     fetch_specific_range(range, callback) {
-        let ths = this;
+        let self = this;
         sheets.spreadsheets.values.get({
             key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
             spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
@@ -63,13 +62,12 @@ module.exports = class Fadi {
             if (err) {
                 throw err;
             }
-
             let res = [];
             var rows = response.values;
             if (rows.length === 0) {
                 callback([])
             } else {
-                ths.arr2json(rows, function(json) {
+                self.arr2json(rows, function(json) {
                     callback(json)
                 })
             }
