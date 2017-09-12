@@ -53,8 +53,6 @@ module.exports = class Fadi {
         });
     }
 
-
-
     fetch_specific_range(range, callback) {
         let ths = this;
         sheets.spreadsheets.values.get({
@@ -78,34 +76,21 @@ module.exports = class Fadi {
         });
     }
 
-
-
     arr2json(array, cb) {
-
         let json = []
         let head = array[0];
-
         for (let i = 1; i < array.length; i++) {
-
             let row = array[i];
             let fields = []
-
             for (let i = 0; i < row.length; i++) {
                 fields.push(row[i])
             }
-
-
             let obj = {}
             for (let i = 0; i < head.length; i++) {
                 obj[head[i]] = fields[i]
             }
-
             json.push(obj)
-
         }
-
         cb(json)
-
     }
-
 }
