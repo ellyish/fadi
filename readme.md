@@ -13,6 +13,12 @@ $ npm install --save fadi
 ```
 
 ### Usage
+If you've checked out the source code repository from GitHub, you may ensure everything works fine before proceeding forward by running the following:
+
+```bash
+$ node tests
+```
+
 To use Fadi, first you have to import the module and make an instance of Fadi.
 ```js
 var Fadi = require('fadi');
