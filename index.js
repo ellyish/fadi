@@ -10,8 +10,8 @@ module.exports = class Fadi {
     fetch_alaa_rows(callback) {
       let self = this;
         sheets.spreadsheets.values.get({
-            key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
-            spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+            key: this.key,
+            spreadsheetId: this.sheet_id,
             range: 'A:Z',
         }, function(err, response) {
             if (err) {
@@ -32,8 +32,8 @@ module.exports = class Fadi {
     fetch_specific_row(row_num, callback) {
       let self = this;
         sheets.spreadsheets.values.get({
-            key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
-            spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+            key: this.key,
+            spreadsheetId: this.sheet_id,
             range: `A${row_num}:Z${row_num+1}`,
         }, function(err, response) {
             if (err) {
@@ -55,8 +55,8 @@ module.exports = class Fadi {
     fetch_specific_range(range, callback) {
         let self = this;
         sheets.spreadsheets.values.get({
-            key: this.key, //AIzaSyCild3rIzu0Eb4RMyS2UhkxcjMDhBWRcQ0
-            spreadsheetId: this.sheet_id, //1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+            key: this.key,
+            spreadsheetId: this.sheet_id,
             range: range,
         }, function(err, response) {
             if (err) {
